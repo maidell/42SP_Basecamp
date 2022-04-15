@@ -1,2 +1,2 @@
 #!/bin/sh
-ifconfig | grep Ether | cut -c 15-57
+ifconfig | awk '/Ethernet/{print $2"  " $3" " $4"  " $5}'
